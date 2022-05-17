@@ -1,0 +1,46 @@
+$breakpoint__xxl: 1200px;
+$breakpoint__xl: 1024px;
+$breakpoint__md: 767px;
+$breakpoint__sm: 576px;
+
+@mixin desktop () {
+   @media (max-width: $breakpoint__xxl) {
+      @content;
+   }
+}
+
+@mixin labtop () {
+   @media (max-width: $breakpoint__xl) {
+      @content;
+   }
+}
+
+@mixin tablet () {
+   @media (max-width: $breakpoint__md) {
+      @content;
+   }
+}
+
+@mixin mobile () {
+   @media (max-width: $breakpoint__sm) {
+      @content;
+   }
+}
+
+
+//  стили для mixin
+@include desktop {
+
+}
+
+@include labtop {
+   
+}
+
+@include tablet {
+   
+}
+
+@include mobile {
+   
+}

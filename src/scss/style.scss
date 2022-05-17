@@ -1,0 +1,13 @@
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+
+@import "_templates_@media";
+
+@import "_colors";
+@import "_interface";
+// Импорт стилей шапки
+@import "blocks/navbar";
+
+
+
