@@ -1,0 +1,96 @@
+.offer {
+   // создали фон что-бы он был на половину экрана
+   background: url(../images/offer/bg-offer.jpg) no-repeat;
+   background-size: contain;
+   background-position: center right;
+   position: relative;
+   // псевдо элемент для разделения экрана
+   &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fff;
+   }
+
+   &-block {
+      width: 50%;
+      padding-right: 90px;
+      // для разделения экрана
+      position: relative;
+   }
+   &__title {
+      width: 360px;
+      line-height: 35px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      max-width: 250px;
+      margin-bottom: 30px;
+   }
+
+   &__input {
+      
+      margin-bottom: 30px;
+      width: 240px;
+      &:first-child {
+         margin-right: 10px; 
+      }
+   }
+
+   &__button {
+      width: 100%;
+      min-height: 70px;
+   }
+
+   &__content {
+		margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+	}
+
+   &__meneger {
+      margin-right: 70px;
+      font-size: 15px;
+      line-height: 24px;
+      width: 224px;
+   }
+
+   &__block {
+      margin: 0;
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 10px;
+   }
+
+   &__phone {
+      font-size: 15px;
+      @include bold;
+   }
+}
+
+@media (max-width: 1200px) {
+   .offer {
+      background-size: cover;
+      &__input {
+         width: 100%;
+         margin-bottom: 10px;
+      }
+
+      &__button {
+         font-size: 13px;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .offer {
+      background: #fff;
+      &-block {
+         width: 100%;
+         padding-right: 0;
+      }
+   }
+}
