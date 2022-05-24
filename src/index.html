@@ -8,6 +8,7 @@
    <title>Document</title>
    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/slick.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -124,7 +125,7 @@
 
    <div class="modal" id="modal">
       <div class="modal-dialog">
-         <button class="modal-dialog__close">&times;</button>
+         <button class="modal-dialog__close" id="close">&times;</button>
          <!-- /.modal-dialog__close -->
          <h4 class="modal-dialog__title">Всплывающее окно</h4>
          <!-- /.modal-dialog__title -->
@@ -133,7 +134,36 @@
    </div>
    <!-- /.modal -->
 
-   <script src="js/main.js"></script>
+   <section class="section portfolio">
+      <div class="container">
+         <h2 class="section-title portfolio__title">Работая с 2007 года,
+            мы сделали более 500 ремонтов в квартирах и домах
+         </h2>
+         <div class="slider">
+            <div class="slider__item"><img class="slider__image" src="images/portfolio/slider_1.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__image" src="images/portfolio/slider_2.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__image" src="images/portfolio/slider_3.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__image" src="images/portfolio/slider_1.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__image" src="images/portfolio/slider_2.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__image" src="images/portfolio/slider_3.jpg" alt=""></div>
+         </div>
+         <div class="arrows portfolio__arrows">
+            <div class="arrows__left">
+               <img src="images/portfolio/l_arrow.png" alt="">
+            </div>
+            <div class="arrows__right">
+               <img src="images/portfolio/r_arrow.png" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- <script src="js/main.js"></script> -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="js/modal.js"></script>
+   <script src="js/slick.min.js"></script>
+   <script src="js/slider.js"></script>
 </body>
 
 </html>

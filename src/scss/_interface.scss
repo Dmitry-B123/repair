@@ -1,5 +1,6 @@
 body {
    @include reg;
+   color: $text-color;
 }
 
 img  {
@@ -40,6 +41,7 @@ img  {
    &-title {
       font-size: 24px;
       @include bold;
+      text-align: center;
    }
    &-subtitle {
       display: block;
@@ -54,5 +56,13 @@ img  {
    border-radius: 10px;
    &:focus {
       border: 1px solid $main-color;
+   }
+}
+
+.arrows {
+   &__left, &__right {
+      &:hover {
+         cursor: pointer;
+      }
    }
 }
