@@ -1,0 +1,89 @@
+.price {
+   &__title {
+      margin: auto;
+      margin-bottom: 58px;
+   }
+
+   &__subtitle {
+      text-align: center;
+      margin-bottom: 59px;
+   }
+
+   &__card {
+      margin-bottom: 30px;
+   }
+}
+
+.cards {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   .card {
+      text-align: center;
+      border: 1px solid $border-card;
+      transition: 0.2s;
+      &:hover {
+         box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+         // создание градиента для картинки
+         .card__img::before {
+            opacity: 1;
+         }
+      }
+
+       // создание градиента для картинки
+      &__img {
+         position: relative;
+         display: block;
+         &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0;
+         }
+      }
+      
+      &__text {
+         padding: 40px;
+      }
+
+      &__title {
+         margin-top: 0;
+      }
+
+      &__link {
+         display: inline-block;
+         @include bold;
+         color: $text-color;
+         text-decoration: none;
+         position: relative;
+         &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $main-color;
+            bottom: -4px;
+            left: 0;
+            z-index: -1;
+            transition: 0.2s;
+         }
+         &:hover::after {
+            height: 12px;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .cards {
+      .card {
+         margin: auto;
+         margin-bottom: 30px;
+      }
+   }
+}
